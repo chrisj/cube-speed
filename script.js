@@ -32,7 +32,7 @@ setTimeout(() => {
 			loadStack('https://storage.googleapis.com/europe_test/').then(() => {
 				const time2 = performance.now() - start2;
 
-				alert('time1: ' + time1 + "\ntime2: " + time2);
+				alert('time1: ' + Math.round(time1) + "\ntime2: " + Math.round(time2));
 			});
 		}, 1000);
 	});
