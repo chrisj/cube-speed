@@ -19,7 +19,22 @@ async function loadStack(url) {
 	});
 }
 
-const start = performance.now();
-loadStack('https://storage.googleapis.com/europe_test/').then(() => {
-	alert('time: ' + (performance.now() - start));
-})
+
+setTimeout(() => {
+	const start = performance.now();
+
+	loadStack('https://storage.googleapis.com/e2198_compressed/Volume-10015-16102/').then(() => {
+		const time1 = performance.now() - start;
+
+		setTimeout(() => {
+			const start2 = performance.now();
+
+			loadStack('https://storage.googleapis.com/europe_test/').then(() => {
+				const time2 = performance.now() - start2;
+
+				alert('time1: ' + time1 + "\ntime2: " + time2);
+			});
+		}, 1000);
+	});
+
+}, 1000);
