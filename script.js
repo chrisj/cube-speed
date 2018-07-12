@@ -1,5 +1,3 @@
-const path = 'https://storage.googleapis.com/e2198_compressed/Volume-10015-16102/';
-
 async function loadStack(url) {
 	return new Promise((f, r) => {
 		let progress = 0;
@@ -22,6 +20,6 @@ async function loadStack(url) {
 }
 
 const start = performance.now();
-loadStack('https://storage.googleapis.com/e2198_compressed/Volume-10015-16102/').then(() => {
+loadStack('https://storage.googleapis.com/europe_test/').then(() => {
 	alert('time: ' + (performance.now() - start));
 })
